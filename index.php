@@ -62,15 +62,10 @@
           densidad = 5.98X10<sup>24</sup> kg / 1.083x10<sup>21</sup> m³<br>
           DTierra = 5,518X10<sup>3</sup> kg/m³
         </p>
-
-        <form method="post">
-          <button type="submit" name="calcular">Calcular</button>
-        </form>
       </section>
       <section class="resultado">
         <h2>Resultado:</h2>
         <?php
-        if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['calcular'])) {
             function calcularVolumenes() {
                 $volumenTierra = 1.083e12;
                 $volumenLuna = 8.94e22 / 5518;
@@ -89,7 +84,6 @@
             }
 
             mostrarResultados($volumenLuna, $volumenSol);
-        }
         ?>
       </section>
     </section>
